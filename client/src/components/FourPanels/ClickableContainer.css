@@ -1,0 +1,16 @@
+/* RectangleLinks.css */
+.rectangle-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh; /* Half the viewport height */
+  }
+  
+.clickable-area {
+    flex: 50%; /* Each area takes up half of the container's width */
+    border: 1px solid black; /* Visual separation */
+    text-decoration: none; /* Style link as a regular box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black; /* Text color */
+  }
