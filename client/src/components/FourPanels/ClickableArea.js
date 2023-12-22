@@ -1,6 +1,8 @@
 // ClickableArea.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './ClickableContainer.css';
+
 
 const ClickableArea = ({ linkTo, children }) => {
   return (
