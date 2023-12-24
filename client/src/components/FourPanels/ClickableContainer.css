@@ -1,13 +1,15 @@
-
 /* RectangleLinks.css */
 .rectangle-container {
   display: flex;
   flex-wrap: wrap;
-  height: 70vh; /* Adjust if you want a different height */
+  height: 80vh; /* Adjust if you want a different height */
   justify-content: center; /* Centers children horizontally */
   align-items: center; /* Centers children vertically */
   margin-top: 10vh; /* Pushes the container down to the middle of the viewport */
-  width: 100%; /* Full width of the container */
+  margin-left: auto; /* Centers the container horizontally */
+  margin-right: auto; /* Centers the container horizontally */
+  width: 95%; /* Full width of the container */
+  gap: 8px
 }
   
 /* ClickableArea.css */
@@ -19,6 +21,8 @@
   height: 50%; /* Each clickable area takes up half the container's height */
   text-decoration: none; /* Removes underline from links */
   color: inherit; /* Inherits text color from parent */
-  border: 1px solid black; /* Adds border for visual separation */
+  border: 1px solid white; /* Adds border for visual separation */
+  color: white;
+  border-radius: 10px;
 }
 

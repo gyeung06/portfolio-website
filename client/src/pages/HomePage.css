@@ -1,0 +1,9 @@
+/* Add this to your CSS file */
+.home-page-hidden {
+    display: none;
+  }
+  
+  .home-page-visible {
+    display: block; /* Or 'flex', 'grid', etc., depending on your layout */
+  }
+  
