@@ -1,9 +1,21 @@
-/* Add this to your CSS file */
-.home-page-hidden {
-    display: none;
+
+
+.radiate-effect {
+  position: fixed;
+  border-radius: 50%;
+  background-color: #2f4355; /* Or any color you prefer */
+  transform: scale(0);
+  width: 20px; /* Initial size */
+  height: 20px;
+  animation: radiate 1.5s forwards; /* Adjust duration as needed */
+  z-index: 1;
+}
+
+
+
+@keyframes radiate {
+  to {
+    transform: scale(200);
+    opacity: 1;
   }
-  
-  .home-page-visible {
-    display: block; /* Or 'flex', 'grid', etc., depending on your layout */
-  }
-  
+}

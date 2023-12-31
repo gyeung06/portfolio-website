@@ -4,34 +4,148 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    background: url('D:\website\personal\portfolio-website\client\public\IMGP1528.jpg') no-repeat center center/cover;
+    z-index: 2;
+    background: url('D:\website\personal\portfolio-website\client\public\IMGP1244.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: opacity 1s ease-in-out;
-    /* Adjust time as needed */
     opacity: 1;
-    /* Start fully visible */
-}
-
-/* Second div for ClickableContainer */
-.second-container {
-    /* You might need some styles here, depending on your design */
-}
-
-.content {
-    text-align: center;
-    /* Additional styling */
-}
-
-.slide-up {
-    transform: translateY(-100vh);
-    /* Move up out of view */
 }
 
 .fade-out {
     opacity: 0;
     /* Fully transparent */
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+.name-text {
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    /* Simulates the typing cursor */
+    width: 0;
+    /* Start with the text fully hidden */
+    animation: typing 1s steps(13) 0.5s forwards, blinkCursor 1s steps(13);
+}
+
+.deleting-effect {
+    animation: deleting 800ms steps(13) backwards;
+}
+
+.show-cursor {
+    border-right: 3px solid white;
+}
+
+.hide-cursor {
+    border-right: 3px solid transparent;
+}
+
+.job-subtext {
+    transform: translate(-50%, -100%);
+    position: fixed;
+    z-index: 3;
+    font-size: 2vw;
+    text-align: center;
+    font-family: 'QuickSand', sans-serif;
+    color: white;
+}
+
+.subtext-letter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    /* Starting position of the animation */
+    animation: dropInLetter 1s forwards;
+}
+
+.drop-out {
+    opacity: 1;
+    animation: dropOutLetter .5s forwards;
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white; /* Adjust the color as needed */
+    position: absolute;
+    left: 50%;
+    bottom: 5vh; /* Adjust distance from bottom as needed */
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: arrowHover .5s ease-in alternate infinite;
+}
+
+@keyframes arrowHover {
+    from {
+        bottom: 5vh;
+    }
+    to {
+        bottom: 3vh;
+    }
+}
+
+@keyframes dropInLetter {
+    from {
+        transform: translateY(-1vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropOutLetter {
+    to {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0vw;
+    }
+
+    to {
+        width: 32.6vw;
+    }
+}
+
+@keyframes deleting {
+    from {
+        width: 32.6vw;
+    }
+
+    to {
+        width: 0vw;
+    }
+}
+
+/* Cursor blink effect */
+@keyframes blinkCursor {
+
+    0%,
+    100% {
+        border-right-color: white;
+    }
+
+    50% {
+        border-right-color: transparent;
+    }
 }

@@ -1,12 +1,22 @@
-// HomePage.js
+import React, { useState } from 'react';
+import ClickableContainer from '../components/FourPanels/ClickableContainer';
+import './HomePage.css';
 
-import React from 'react';
-import ClickableContainer from '../components/FourPanels/ClickableContainer'
+const HomePage = ({ navigateTo }) =>  {
+  const [effectProps, setEffectProps] = useState({ x: 0, y: 0, show: false });
 
-function HomePage() {
+  const handleEffectTrigger = (x, y, newSection) => {
+    setEffectProps({ x, y, show: true });
+    setTimeout(() => {
+      setEffectProps({ ...effectProps, show: false });
+      navigateTo(newSection)
+    }, 1000); // Duration of the animation
+  };
+
   return (
     <div>
-        <ClickableContainer/>
+      {effectProps.show && <div className="radiate-effect" style={{ left: effectProps.x, top: effectProps.y }}></div>}
+      <ClickableContainer onEffectTrigger={handleEffectTrigger} />
     </div>
   );
 }
