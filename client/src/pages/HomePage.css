@@ -1,5 +1,4 @@
 
-
 .radiate-effect {
   position: fixed;
   border-radius: 50%;
@@ -8,10 +7,8 @@
   width: 20px; /* Initial size */
   height: 20px;
   animation: radiate 1.5s forwards; /* Adjust duration as needed */
-  z-index: 1;
+  z-index: 4;
 }
-
-
 
 @keyframes radiate {
   to {
@@ -19,3 +16,4 @@
     opacity: 1;
   }
 }
+

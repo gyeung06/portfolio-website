@@ -14,9 +14,11 @@ const HomePage = ({ navigateTo }) =>  {
   };
 
   return (
-    <div>
+    <div className='home-container'>
       {effectProps.show && <div className="radiate-effect" style={{ left: effectProps.x, top: effectProps.y }}></div>}
-      <ClickableContainer onEffectTrigger={handleEffectTrigger} />
+      <div className='container-container'>
+        <ClickableContainer onEffectTrigger={handleEffectTrigger} />
+      </div>
     </div>
   );
 }
