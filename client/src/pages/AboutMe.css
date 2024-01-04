@@ -1,9 +1,16 @@
 .about-me-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
+    flex-direction: row; /* Align children horizontally */
+    justify-content: space-between; /* Space out the children */
+    width: 100%; /* Adjust as needed */
     color: white;
+}
+
+.left-text, .right-text {
+    margin-left: 20px; /* Adjust as needed for padding */
+    font-family: 'Zilla Slab', serif;
+    flex: 1; /* This ensures that both divs take up equal space */
+    padding: 1vw; /* Optional, for some spacing around the content */
 }
 
 .left-text h1 {
@@ -15,7 +22,8 @@
     font-size: 2em;
 }
 
-.left-text {
-    margin-left: 20px; /* Adjust as needed for padding */
-    font-family: 'Zilla Slab', serif;
+.left-text a, .right-text a {
+    color: inherit; /* This makes the link color the same as the parent text color */
+    text-decoration: none; /* Removes the underline */
+    font-size: 2em;
 }

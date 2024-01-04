@@ -17,6 +17,26 @@ Outside of my professional work, I enjoy staying abreast of the latest technolog
 I'm excited to continue my journey in software development, seeking opportunities to contribute my skills and grow further. Thank you for visiting my portfolio!
                 </p>
             </div>
+            <div className='right-text'>
+                <h2>
+                    Experiences 
+                </h2>
+                <ul>
+                <li>
+                    <a href='https://www.rostrummedical.com/'>Software Developer at Rostrum Medical</a>
+                    <br></br>
+                    <span class="subtext">August 2023 - Present</span>
+                </li>
+
+                <li>
+                    <a href='https://www.piccolosoft.com/service.html?type=taxi'>Android Developer at PiccoloSoft</a> 
+                    <br></br>
+                    <span class="subtext">August 2021 - May 2022</span>
+                    </li>
+                </ul>
+
+
+            </div>
         </div>
     );
 };
